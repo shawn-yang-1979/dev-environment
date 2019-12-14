@@ -1,0 +1,7 @@
+---
+- name: "docker run redis {{ version }}"
+  docker_container:
+    name: docker-redis
+    image: "redis:{{ version }}"
+    published_ports: 
+      - "6379:6379"

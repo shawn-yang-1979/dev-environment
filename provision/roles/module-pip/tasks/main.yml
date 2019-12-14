@@ -1,0 +1,10 @@
+---
+- name: make sure pip is installed
+  apt: 
+    name: "{{ packages }}"
+    state: latest
+    force: yes
+    update_cache: yes
+  vars:    
+    packages:
+    - python-pip
